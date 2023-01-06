@@ -23,9 +23,9 @@
 </form>
 <div class="container" style="margin-top: 15px;">
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let i of tab">
-            <span>{{i.email}} {{i.password}}</span>
-            <button type="submit" class="btn btn-danger" (click)="delete(i)">
+        <li class="list-group-item" *ngFor="let item of tab">
+            <span>{{item.email}} {{item.password}}</span>
+            <button type="submit" class="btn btn-danger" (click)="delete(item)">
                 supprimer
             </button>
         </li>
