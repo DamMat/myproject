@@ -1,0 +1,38 @@
+<div class="container">
+    
+    <form action="POST" (ngSubmit)="add()" [formGroup]="personForm">
+        <input class="form-control" type="text" name=id formControlName="id" hidden>
+
+        <div class="form-group">
+            <label for="id">firstName:</label>
+            <input class="form-control" type="text" placeholder="Enter firstName" name=firstName formControlName="firstName">
+        </div>
+      
+        <div class="form-group">
+            <label for="id">lastName:</label>
+            <input class="form-control" type="text" placeholder="Enter lastName" name=lastName formControlName="lastName">
+        </div>
+
+        <div class="form-group">
+            <label for="id">age:</label>
+            <input class="form-control" type="text" placeholder="Enter age" name=age formControlName="age">
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+</div>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of persons">
+            <span>{{item.firstName}} {{item.lastName}} {{item.age}}</span>
+            <button class="btn btn-danger" (click)="delete(item.id!)">
+                Supprimer
+            </button>
+            <button class="btn btn-danger" (click)="get(item.id!)">
+                Get
+            </button>
+            
+        </li>
+    </ul>
+</div>
+
