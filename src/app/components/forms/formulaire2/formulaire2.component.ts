@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Login } from '../../interfaces/login';
+import { Login } from '../../../interfaces/login';
 
 @Component({
   selector: 'app-formulaire2',

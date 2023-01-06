@@ -28,7 +28,6 @@ export class PersonComponent {
   getAll() {
     this.personService.getAll().subscribe(res => {
       this.personnes = res;
-      console.log(res);
     })
   }
 

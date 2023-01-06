@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { FormulaireComponent } from './components/forms/formulaire/formulaire.component';
 import { HomeComponent } from './components/home/home.component';
-import { UserComponent } from './components/user/user.component';
-import { UsersComponent } from './components/users/users.component';
-import { Formulaire2Component } from './components/formulaire2/formulaire2.component';
+import { UserComponent } from './components/forms/user/user.component';
+import { UsersComponent } from './components/forms/users/users.component';
+import { Formulaire2Component } from './components/forms/formulaire2/formulaire2.component';
 import { NotFoundComponent } from './components/core/not-found/not-found.component';
-import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
-import { PersonComponent } from './components/person/person.component';
-import { RPersonComponent } from './components/r-person/r-person.component';
+import { ReactiveFormComponent } from './components/forms/reactive-form/reactive-form.component';
+import { PersonComponent } from './components/forms/person/person.component';
+import { RPersonComponent } from './components/forms/r-person/r-person.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent},
@@ -18,8 +18,6 @@ const routes: Routes = [
   {path: "person", component: PersonComponent}, 
   {path: "person/:personId", component: UserComponent}, 
   {path: "rperson", component: RPersonComponent},  
- 
-
   {path: "users", component: UsersComponent}, 
   {path: "users/:userId", component: UserComponent}, 
 
