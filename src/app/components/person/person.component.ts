@@ -18,6 +18,7 @@ export class PersonComponent {
   constructor(private personService: PersonService) { }
 
   ngOnInit() {
+    // Bonjout tt le monde
     this.getAll();
     this.interval = setInterval(() => { 
       this.getAll(); 
