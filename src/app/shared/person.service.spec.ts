@@ -10,7 +10,7 @@ describe('PersonService', () => {
   // methode appele avant chaque test
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      imports: [HttpClientTestingModule,]
     });
     // injection des service
     service = TestBed.inject(PersonService);

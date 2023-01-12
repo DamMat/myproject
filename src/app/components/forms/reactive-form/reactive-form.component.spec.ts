@@ -1,6 +1,10 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './reactive-form.component';
+import { PersonService } from 'src/app/shared/person.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ReactiveFormComponent', () => {
   let component: ReactiveFormComponent;
@@ -8,7 +12,13 @@ describe('ReactiveFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReactiveFormComponent ]
+      declarations: [ ReactiveFormComponent ],
+      imports: [
+        RouterTestingModule,  
+        ReactiveFormsModule,
+        HttpClientTestingModule 
+      ],
+      providers:[PersonService]
     })
     .compileComponents();
 

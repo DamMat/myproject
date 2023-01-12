@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonService } from 'src/app/shared/person.service';
 import { PersonComponent } from './person.component';
+import { FormsModule } from '@angular/forms';
 
 describe('PersonComponent', () => {
   let component: PersonComponent;
@@ -8,9 +11,12 @@ describe('PersonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PersonComponent ]
+      imports: [HttpClientTestingModule
+        , HttpClientModule, FormsModule],
+      declarations: [PersonComponent],
+      providers: [PersonService]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(PersonComponent);
     component = fixture.componentInstance;

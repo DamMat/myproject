@@ -75,6 +75,5 @@ export class HomeComponent {
   goTo(): void{
     this.router.navigate(['/form']);
   }
-
   
 }
